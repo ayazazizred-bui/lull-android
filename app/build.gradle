@@ -1,0 +1,17 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.lull.android'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'app.lull.android'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+        // The page the app opens. Change this if the Lull address changes.
+        buildConfigField 'String', 'LULL_URL', '"https://claude.ai/artifact/9pTrh6kW9Lg9r6ogzwBNkh"'
+    }
+    buildFeatures { buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    buildTypes { release { minifyEnabled false } }
+}
